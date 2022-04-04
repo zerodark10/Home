@@ -1,0 +1,174 @@
+/* --------------------------------------------------------
+/* ---- SCROLL
+-------------------------------------------------------- */
+
+/*var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // downscroll cod
+       //console.log("scroll Down", lastScrollTop);
+       $( ".SetTopOnScroll" ).removeClass( "topOnScroll" );
+   } else {
+      // upscroll code
+      //console.log("scroll UP", lastScrollTop);
+      if(lastScrollTop <= 150 ){
+        $( ".SetTopOnScroll" ).addClass( "topOnScroll" );
+      }
+
+   }
+   lastScrollTop = st;
+});*/
+
+
+
+
+
+/* --------------------------------------------------------
+/* ---- SLIDER
+-------------------------------------------------------- */
+
+$(".on-show-1").click(function() {
+    $(".s-service").hide();
+    $(".show-perfil-1").fadeIn();
+    $(".text-p").removeClass("enable-p-text");
+    $(".text-p-1").addClass("enable-p-text");
+    $(".service_icon").removeClass("icon-lic-active");
+    $(".icon-lic-1").addClass("icon-lic-active");
+
+});
+
+$(".on-show-2").click(function() {
+    $(".s-service").hide();
+    $(".show-perfil-2").fadeIn();
+    $(".text-p").removeClass("enable-p-text");
+    $(".text-p-2").addClass("enable-p-text");
+    $(".service_icon").removeClass("icon-lic-active");
+    $(".icon-lic-2").addClass("icon-lic-active");
+});
+
+$(".on-show-3").click(function() {
+    $(".s-service").hide();
+    $(".show-perfil-3").fadeIn();
+    $(".text-p").removeClass("enable-p-text");
+    $(".text-p-3").addClass("enable-p-text");
+    $(".service_icon").removeClass("icon-lic-active");
+    $(".icon-lic-3").addClass("icon-lic-active");
+});
+
+$(".on-show-4").click(function() {
+    $(".s-service").hide();
+    $(".show-perfil-4").fadeIn();
+    $(".text-p").removeClass("enable-p-text");
+    $(".text-p-4").addClass("enable-p-text");
+    $(".service_icon").removeClass("icon-lic-active");
+    $(".icon-lic-4").addClass("icon-lic-active");
+});
+
+
+
+/* --------------------------------------------------------
+/* ---- MENU LATERAL
+-------------------------------------------------------- */
+
+$(".menu-lat").hover(function(e) {
+    $(".hover-menu-info").hide();
+    $(".hover-menu-social").hide();
+    e.stopPropagation();
+});
+
+
+
+
+//MENU INFORMACIÓN
+
+$(".menu-lat-info").mouseenter(function(e) {
+    $(".hover-menu-social").hide();
+    $(".hover-menu-info").fadeIn();
+    e.stopPropagation();
+});
+
+$(".hover-menu-info").mouseleave(function(e) {
+    $(".hover-menu-info").hide();
+    e.stopPropagation();
+});
+
+
+
+var m_info = true;
+$(".menu-lat-info").click(function(e) {
+    if (m_info) {
+        m_info = false;
+        $(".hover-menu-info").fadeIn();
+    } else {
+        m_info = true;
+        $(".hover-menu-info").hide();
+    }
+})
+
+
+//MENU SOCIAL
+$(".menu-lat-social").mouseenter(function(e) {
+    $(".hover-menu-info").hide();
+    $(".hover-menu-social").fadeIn();
+    e.stopPropagation();
+});
+
+
+$(".hover-menu-social").mouseleave(function(e) {
+    $(".hover-menu-social").hide();
+    e.stopPropagation();
+});
+
+
+var m_social = true;
+$(".menu-lat-social").click(function(e) {
+    if (m_social) {
+        m_social = false;
+        $(".hover-menu-social").fadeIn();
+    } else {
+        m_social = true;
+        $(".hover-menu-social").hide();
+    }
+})
+
+
+/* --------------------------------------------------------
+/* ---- NUEVO MENU MOVIL
+-------------------------------------------------------- */
+
+
+$(".m-info").click(function(e) {
+    $(".full-movil-menu").show();
+    $(".hover-menu-social").hide();
+    $("body").addClass("quitScroll");
+
+})
+
+$(".close-m").click(function(e) {
+    $(".full-movil-menu").hide();
+    $("body").removeClass("quitScroll");
+})
+
+
+/* --------------------------------------------------------
+/* ---- MENU HEADER
+-------------------------------------------------------- */
+
+$(".btn-menu-h").click(function(event) {
+    //$(".cont-menu-h-items").addClass("show-menu-h")
+    //$(".cont-menu-h-items").removeClass("hide-menu-h")
+    $(".cont-menu-h-items").show();
+    $("body").addClass("quitScroll");
+
+
+
+});
+
+$(".close-h").click(function() {
+    //$(".cont-menu-h-items").addClass("hide-menu-h")
+    //$(".cont-menu-h-items").removeClass("show-menu-h")
+    $(".cont-menu-h-items").hide();
+    $("body").removeClass("quitScroll");
+
+});
